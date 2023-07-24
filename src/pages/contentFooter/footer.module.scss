@@ -1,0 +1,152 @@
+@import '../../style.scss';
+
+.footerMain {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    margin-top: 25vh;
+    // background-color: $accentColor;
+    .upperline {
+        position: relative;
+        left: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+
+        // background-color: aqua;
+        .item{
+            font-size: x-large;
+            font-weight: 600;
+        }
+        .logoAndTitle {
+            position: relative;
+            margin-left: 0%;
+            display: flex;
+            flex-direction: row;
+            // background-color: red;
+            align-items: center;
+            width: 20%;
+
+            .logo {
+                position: relative;
+                left: -2%;
+                z-index: 1;
+            }
+
+            .title {
+                position: absolute;
+                transition-duration: .5s;
+                left: 0;
+                opacity: 0;
+            }
+
+            .logo:hover+.title {
+                left: 10vw;
+                opacity: 1;
+            }
+        }
+    }
+
+    .underline {
+        position: relative;
+        left: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        .socialMedia {
+            margin-left: 2.5vw;
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .social{
+                transition-duration: .5s;
+            }
+            .social:hover{
+                scale: 1.2;
+            }
+        }
+    }
+}
+
+
+
+.triangleTop {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 30vw solid transparent;
+    border-right: 40vh solid $accentColor;
+    border-top: 150vh solid transparent;    
+}
+.triangleTop::before {
+    content: "";
+    position: absolute;
+    bottom: 2.5vh;
+    left: -30.5vw; /* Змініть це значення, щоб налаштувати положення тіні */
+    width: 0;
+    height: 0;
+    border-left: 30vw solid transparent;
+    border-right: 40vh solid rgba(0, 0, 0, 1);
+    border-top: 150vh solid transparent;   
+    z-index: -1;
+    filter: blur(20px);
+}
+.triangleBottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 80vw solid transparent;
+    border-right: 100vw solid transparent;
+    border-bottom: 40vh solid $accentColor;
+}
+.triangleBottom::before {
+    content: "";
+    position: absolute;
+    top: -1vh;
+    right: -100vw; /* Змініть це значення, щоб налаштувати положення тіні */
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent; /* Колір тіні та прозорість */
+    border-right: 100vw solid transparent;
+    border-bottom: 40vh solid rgba(0, 0, 0, 1);
+    z-index: -1;
+    filter: blur(20px); /* Змініть значення для регулювання розмиття */
+}
+@media screen and (max-width: 1199px) {
+    .footerMain{
+        margin-top: 5vh;
+    }
+    .upperline{
+        display: flex;
+        justify-content: center !important;
+        .logoAndTitle{
+            display: none !important;
+        }
+    }
+    .underline{
+        left: 0 !important;
+    }
+    .socialMedia{
+        position: relative;
+        margin-top: 10vh;
+        top: 5hv !important;
+        margin-left: 0 !important;
+        left: 20vw;
+        width: 60vw !important;
+    }
+    .triangleTop{
+        display: none;
+    }
+    .triangleBottom{
+        display: none;
+    }
+}

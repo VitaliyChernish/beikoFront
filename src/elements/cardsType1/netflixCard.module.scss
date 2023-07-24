@@ -1,0 +1,257 @@
+// @import '../../../../../../style.scss';
+$button-size: 1.4vw;
+
+.card {
+  background-color: #222;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 10px 10px 20px 5px rgba(5, 5, 5, 0.808);
+}
+
+.card__image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  // padding-bottom: 150%;
+  background-color: #181818;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 20px;
+}
+
+.card__body {
+  position: absolute;
+  background-color: #181818;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  width: 90%;
+  padding: 5%;
+  padding-top: 0;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.priceAndMoreInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+
+
+  .moreInfoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $button-size;
+    height: $button-size;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    transition-duration: 1s;
+
+    .arrow {
+      padding: 0;
+      margin: 0;
+      width: .4vw;
+      height: .4vw;
+      border: 1px solid #cccccc42;
+      border-top: none;
+      border-right: none;
+      
+    }
+  }
+  .moreInfoContainer:hover{
+    scale: 1.5;
+    background-color: #cccccc1e;
+    .arrow {
+      border: 1px solid #d10f0f5d;
+      border-top: none;
+      border-right: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .card {
+    border-radius: 2vw !important;
+    overflow: hidden;
+    filter: grayscale(100%);
+  }
+  .card:hover{
+    filter: grayscale(0%);
+  }
+}
+
+// style for NetflixCardMoreInfo.jsx
+.maximumInfoContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(77, 76, 76, 0.089);
+
+  /* прозорий колір фону */
+  .scrollContainer {
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    transform: none;
+    transition: none;
+    scale: 1;
+    animation: legalRender .5s forwards;
+
+    .contentMaxInfo {
+      position: relative;
+      top: 5vh;
+      background-color: gray;
+
+      .imageContainer {
+        position: relative;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .headerButtonContainerMain {
+          position: absolute;
+          bottom: 20%;
+          left: 5%;
+          font-size: 4vw;
+          color: #ffffff;
+          z-index: 1;
+
+          .headerButtonContainer {
+            font-size: 1.5vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+
+        .gradientMask {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          bottom: 0;
+          background: linear-gradient(to top, gray, rgba(0, 0, 0, 0));
+        }
+
+        .closeButton {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 30px;
+          height: 30px;
+          background-color: #ffffff;
+          border: none;
+          border-radius: 50%;
+          font-size: 20px;
+          color: #333333;
+          cursor: pointer;
+        }
+      }
+
+      .descriptionsContainer {
+        padding: 5%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .scrollContainer::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .scrollContainer{
+    width: 80% !important;
+    font-size: 2.5vw;
+  }
+}
+
+@keyframes legalRender {
+  0% {
+    scale: .3;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.deleteButton{
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 68, 0, 0.397);
+  z-index: 999;
+  text-align: center;
+  font-size: xx-large;
+}
+.deleteButton:hover{
+  background-color: red;
+}
+
+.editPrice{
+  position: absolute;
+  top: 2.5vw;
+  width: 100%;
+  background-color: rgba(56, 194, 79, 0.397);
+  z-index: 999;
+  text-align: center;
+  font-size: xx-large;
+}
+.editPrice:hover{
+  background-color: rgba(56, 194, 79, 0.797);
+}
+
+.largeImage,
+.largeImage1,
+.largeImage2 {
+    position: absolute;
+    background: url('../../statik/screensho3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1.5s;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 60vw;
+    border-radius: 2vw;
+}
+
+.largeImage1{
+    background: url('../../statik/screenshot4.png');
+    background-size: cover;
+}
+.largeImage{
+    background: url('../../statik/screenshot5.png');
+    background-size: cover;
+}

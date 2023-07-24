@@ -1,0 +1,209 @@
+@import '../../style.scss';
+
+.content2Main {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7vh;
+    .iconContainerMain {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.largeImage,
+.largeImage1,
+.largeImage2 {
+    position: absolute;
+    // background: url('../../statik/screensho3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1.5s;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 60vw;
+    border-radius: 2vw;
+}
+
+.largeImage1 {
+    // background: url('../../statik/screenshot4.png');
+    background-size: cover;
+}
+
+.largeImage {
+    // background: url('../../statik/screenshot5.png');
+    background-size: cover;
+}
+
+.largeImageContainer {
+    position: absolute;
+    // overflow: hidden;
+    margin: 5vh;
+    top: 27vh;
+    border-radius: 5vw;
+    transition: 1.5s;
+    width: 40%;
+    height: 60%;
+    left: 0;
+}
+
+.header {
+    position: relative;
+    margin-top: 30vh;
+    width: 96vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+.triangleTop {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 30vw solid $accentColor;
+    border-right: 40vh solid transparent;
+    border-bottom: 150vh solid transparent;    
+}
+.triangleTop::before {
+    content: "";
+    position: absolute;
+    top: 2.5vh;
+    left: -30vw; /* Змініть це значення, щоб налаштувати положення тіні */
+    width: 0;
+    height: 0;
+    border-left: 30vw solid rgba(0, 0, 0, 1); /* Колір тіні та прозорість */
+    border-right: 40vh solid transparent;
+    border-bottom: 150vh solid transparent;
+    z-index: -1;
+    filter: blur(20px);
+}
+.triangleTop::after {
+    content: "";
+    position: absolute;
+    top: -5vh;
+    left: -36vw; /* Змініть це значення, щоб налаштувати положення тіні */
+    width: 0;
+    height: 0;
+    border-left: 26vw solid rgba(255, 255, 255, 0.11); /* Колір тіні та прозорість */
+    border-right: 40vh solid transparent;
+    border-bottom: 150vh solid transparent;
+    filter: blur(60px);
+}
+.triangleBottom{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-right: 80vw solid $accentColor;
+    border-bottom: 40vh solid  transparent;
+}
+.triangleBottom::before {
+    content: "";
+    position: absolute;
+    top: 2vh;
+    right: -80vw; /* Змініть це значення, щоб налаштувати положення тіні */
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent; /* Колір тіні та прозорість */
+    border-right: 80vw solid rgba(0, 0, 0, 1);
+    border-bottom: 40vh solid transparent;
+    z-index: -1;
+    filter: blur(20px); /* Змініть значення для регулювання розмиття */
+}
+.triangleBottom::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -80vw;
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-right: 78vw solid rgba(255, 255, 255, 0.266);
+    border-bottom: 18vh solid transparent;
+    filter: blur(60px);
+}
+
+@media screen and (max-width: 1199px) {
+    .triangleTop{
+        display: none;
+    }
+    .triangleBottom{
+        display: none;
+    }
+    .content2Main {
+        .iconContainerMain {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .decordsIconAnimation {
+        scale: 1;
+    }
+
+    .header {
+        margin-top: 10vh;
+        justify-content: center;
+    }
+
+    .largeImage,
+    .largeImage1,
+    .largeImage2 {
+        position: relative;
+        top: 0;
+        width: 90vw;
+        height: 60vw;
+        border-radius: 2vw;
+    }
+
+    .largeImageContainer {
+        position: relative;
+        top: 0;
+        width: 90vw;
+        height: 60%;
+        border-radius: 2vw;
+        left: 0;
+    }
+}
+.edits,
+.delete{
+    background-color: rgb(139, 1, 1);
+    text-align: center;
+    font-size: xx-large;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.edits{
+    background-color: rgb(83, 138, 1);
+}
+
+.delete:hover{
+    background-color: red;
+}
+.edits:hover{
+    background-color: rgb(153, 255, 0);
+}
+
+.createButton {
+    font-size: x-large;
+    font-weight: 800;
+    margin-top: 2%;
+    cursor: pointer;
+    transition-duration: .5s;
+}

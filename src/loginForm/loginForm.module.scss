@@ -1,0 +1,161 @@
+.formMain{
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.field{
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mainBlock {
+  height: 30vw;
+  border: 1px solid red;
+}
+
+.variantForm,
+.leftContent,
+.rightContent,
+.animationLeft,
+.right,
+.left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainForm {
+  position: relative;
+  left: 15%;
+  top: 10%;
+  width: 70%;
+  height: 25vw;
+  box-shadow: 0px 0px 30px 20px greenyellow;
+  background-color: darkcyan;
+
+  .left {
+    left: 0%;
+    width: 50%;
+    height: inherit;
+    transition-duration: .5s;
+
+    .leftContent {
+      height: inherit;
+    }
+  }
+
+  .right {
+    left: 50%;
+    width: 50%;
+    height: inherit;
+    transition-duration: .5s;
+
+    .rightContent {
+      height: inherit;
+    }
+  }
+}
+
+.variantForm {
+  top: 100%;
+  left: 50%;
+  width: 32.5%;
+  height: 30vw;
+  background-color: greenyellow;
+  transition-duration: .8s;
+  overflow: hidden;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: center center;
+}
+
+.flipped {
+  transform: rotateY(360deg) translateX(50vw);
+}
+
+.front,
+.back,
+.left1,
+.right1,
+.top,
+.bottom {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.left1 {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right1 {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.animationLogin1 {
+  position: absolute;
+  top: 150%;
+  left: 0%;
+  width: 150%;
+  height: 50%;
+  background-color: #ccc;
+  transform: rotateZ(-14deg);
+  box-shadow: 0px 0px 30px 20px darkcyan;
+  transition-duration: 1s;
+  animation: none;
+}
+.animationLogin2 {
+  position: absolute;
+  top: -20%;
+  left: 100%;
+  width: 150%;
+  height: 50%;
+  background-color: #ccc;
+  transform: rotateZ(63deg);
+  box-shadow: -10px 10px 30px 20px darkcyan;
+  transition-duration: 1s;
+  animation: none;
+}

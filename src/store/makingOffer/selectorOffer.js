@@ -1,0 +1,1 @@
+export const selectOfferReducer = (state) => state.isOfferReducer.makingOffer;

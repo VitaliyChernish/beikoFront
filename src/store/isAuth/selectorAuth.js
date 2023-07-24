@@ -1,0 +1,1 @@
+export const selectRoleLoginReducer = (state) => state.roleLoginReducer.content;

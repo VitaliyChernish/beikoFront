@@ -1,0 +1,35 @@
+
+
+.logoImage {
+    padding: 1%;
+    padding-left: 0%;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    background-image: url("../../statik/screenshot1.png");
+    background-repeat: no-repeat;
+    background-size: 13vw 12vw;
+    background-position: center;
+    transition-duration: .5s;
+    opacity: 1;
+}
+
+.logoImage:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1199px) {
+    .logoMain {
+        position: absolute;
+        margin-left: 2vw;
+        top: 0;
+        left: 0;
+    }
+
+    .logoImage {
+        width: 165px;
+        height: 72px;
+        z-index: 700;
+    }
+}

@@ -1,0 +1,59 @@
+@import '../../style.scss';
+
+.burgerMain,
+.burgerMain::after,
+.burgerMain::before {
+    position: relative;
+    width: 45px;
+    height: 5px;
+    background-color: $buttonsColor;
+    z-index: 1001;
+    transition-duration: .5s;
+}
+
+.burgerMain {
+    margin-left: 5vw;
+    pointer-events: none;
+}
+
+.burgerMask {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 30px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.burgerMask:hover+.burgerMain::after {
+    transform: translateY(3px);
+}
+
+.burgerMask:hover+.burgerMain::before {
+    transform: translateY(-3px);
+}
+
+.burgerMain::after {
+    content: "";
+    display: block;
+    margin-top: 22px;
+}
+
+.burgerMain::before {
+    content: "";
+    display: block;
+    margin-top: -13px;
+}
+
+.showMenu{
+    position:fixed;
+    // left: 100vw;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-duration: .5s;
+    background-color: rgba(240, 248, 255, 0.336);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+}

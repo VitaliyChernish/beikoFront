@@ -1,0 +1,1 @@
+export const selectTogleLoginReducer = (state) => state.TogleLoginReducer.content;

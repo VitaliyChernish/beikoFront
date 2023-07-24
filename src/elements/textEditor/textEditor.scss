@@ -1,0 +1,18 @@
+
+.rdw-option-wrapper {
+    // border: 1px solid red;
+    // position: absolute;
+    width: 2vw;
+    height: 2vw;
+    box-shadow: 0 0px 10px 0 rgb(0, 0, 0);
+    transition-duration: .5s;
+}
+.DraftEditor-root{
+    margin-right: 2%;
+    line-height: 150%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: .5vw;
+    box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 0.5);
+    background-color: rgba(95, 95, 95, 0.404);
+}

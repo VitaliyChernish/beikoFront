@@ -1,0 +1,38 @@
+@import '../../style.scss';
+
+button {
+    font-size: large;
+    font-weight: 900;
+    color: #ccc;
+    background: none;
+    border: none;
+}
+.buttonContainerMain {
+    position: relative;
+    width: 240px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $buttonsColor;
+    z-index: 901;
+    border-radius: 10vw 10vw 10vw 10vw;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+.buttonContainerMain:hover{
+    scale: 1.1;
+    box-shadow: 0 0px 15px 0px $buttonsColor;
+}
+
+
+
+
+@media screen and (min-width: 1199px) {
+    .buttonContainerMain {
+        // padding: 2vw;
+        // padding-left: 5vw;
+        // padding-right: 5vw;
+        margin: 2vw;
+    }
+}
